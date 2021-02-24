@@ -70,9 +70,14 @@ h2 {
 	border-style: solid;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: bold;
+	margin-bottom: 10px;
 	padding: 18px;
 	padding-left: 25px;
 	width: 380px;
+}
+
+.mail.active {
+	border-color: hsl(0, 93%, 68%);
 }
 
 .mail:focus {
@@ -85,14 +90,14 @@ h2 {
 
 button {
 	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-	padding: 13.5px;
+	padding: 13.5px 22px;
 	border-radius: 24px;
 	position: relative;
 	left: -76px;
 	bottom: -5px;
 	border: none;
 	width: 85px;
-	filter: drop-shadow(10px 10px 4px #000);
+	filter: drop-shadow(1px 10px 4px rgba(151, 152, 154, 0.3));
 }
 
 button:focus {
@@ -101,4 +106,35 @@ button:focus {
 
 button:hover {
 	cursor: pointer;
+}
+
+.error-msg {
+	color: hsl(0, 93%, 68%);
+	font-size: 12px;
+	font-weight: bold;
+	margin-left: 30px;
+	visibility: hidden;
+}
+
+.error-img {
+	position: absolute;
+	bottom: 167px;
+	left: 550px;
+	visibility: hidden;
+}
+
+.form-control.error button {
+	background: linear-gradient(135deg, hsl(0, 23%, 77%), hsl(0, 100%, 91%));
+}
+
+.form-control.error .error-msg {
+	visibility: visible;
+}
+
+.form-control.error .error-img {
+	visibility: visible;
+}
+
+.form-control.error input {
+	border-color: hsl(0, 93%, 68%);
 }
